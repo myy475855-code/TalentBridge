@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — TalentBridge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- Sidebar collapse state (desktop). Must stay before .app so CSS can react to it. -->
+  <input class="visually-hidden" type="checkbox" id="collapse">
+
+  <div class="app">
+    <aside class="sidebar" aria-label="App navigation">
+      <a class="brand sidebar__brand" href="landing.html">TalentBridge</a>
+      <nav aria-label="Main">
+        <ul class="sidebar__list">
+          <li><a class="sidebar__link" href="dashboard.html" aria-current="page"><span class="sidebar__icon" aria-hidden="true">▦</span><span class="sidebar__text">Overview</span></a></li>
+          <li><a class="sidebar__link" href="#"><span class="sidebar__icon" aria-hidden="true">✎</span><span class="sidebar__text">Applications</span></a></li>
+          <li><a class="sidebar__link" href="#"><span class="sidebar__icon" aria-hidden="true">☰</span><span class="sidebar__text">Employers</span></a></li>
+          <li><a class="sidebar__link" href="#"><span class="sidebar__icon" aria-hidden="true">⚙</span><span class="sidebar__text">Settings</span></a></li>
+        </ul>
+      </nav>
+      <label class="sidebar__collapse" for="collapse"><span aria-hidden="true">⇔</span><span class="sidebar__text">Collapse sidebar</span><span class="visually-hidden">toggle</span></label>
+    </aside>
+
+    <header class="topbar">
+      <form class="topbar__search" role="search" action="#">
+        <label class="visually-hidden" for="search">Search applications</label>
+        <input class="field__control" id="search" type="search" placeholder="Search applications">
+      </form>
+      <details class="user-menu">
+        <summary class="user-menu__btn" aria-label="Account menu">AR</summary>
+        <ul class="user-menu__list">
+          <li><a href="#">Profile</a></li><li><a href="#">Notifications</a></li><li><a href="landing.html">Log out</a></li>
+        </ul>
+      </details>
+    </header>
+
+    <main class="dash" id="main">
+      <h1 class="dash__title">Overview</h1>
+      <section aria-labelledby="stats-title">
+        <h2 class="visually-hidden" id="stats-title">Key numbers this term</h2>
+        <ul class="stat-grid">
+          <li class="card"><article><p class="stat__label">Active applications</p><p class="stat__value">248</p><p class="stat__delta">+12 this week</p></article></li>
+          <li class="card"><article><p class="stat__label">Interviews booked</p><p class="stat__value">37</p><p class="stat__delta">+5 this week</p></article></li>
+          <li class="card"><article><p class="stat__label">Placements</p><p class="stat__value">64</p><p class="stat__delta">+3 this week</p></article></li>
+          <li class="card"><article><p class="stat__label">Partner employers</p><p class="stat__value">19</p><p class="stat__delta">+1 this month</p></article></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="table-title">
+        <h2 id="table-title">Recent applications</h2>
+        <!-- tabindex lets keyboard users scroll the table when it overflows -->
+        <div class="table-wrap" role="region" aria-labelledby="table-title" tabindex="0">
+          <table class="table">
+            <thead><tr><th scope="col">Student</th><th scope="col">Employer</th><th scope="col">Role</th><th scope="col">Stage</th><th scope="col">Updated</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Daniel Okoye</th><td>Lattice Works</td><td>Frontend intern</td><td><span class="badge badge--ok">Offer sent</span></td><td>Today</td></tr>
+              <tr><th scope="row">Sara Malik</th><td>Harbor Health</td><td>Data analyst intern</td><td><span class="badge badge--warn">Interview</span></td><td>Yesterday</td></tr>
+              <tr><th scope="row">Tomás Rivera</th><td>Bluepeak Energy</td><td>Operations intern</td><td><span class="badge badge--warn">Under review</span></td><td>2 days ago</td></tr>
+              <tr><th scope="row">Mei Chen</th><td>Lattice Works</td><td>QA intern</td><td><span class="badge badge--ok">Accepted</span></td><td>3 days ago</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

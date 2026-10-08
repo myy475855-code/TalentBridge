@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalentBridge — Internship placement that works for students and employers</title>
+  <meta name="description" content="TalentBridge matches students with internships and gives employers a shortlist they can trust.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__bar">
+        <a class="brand" href="landing.html">TalentBridge</a>
+        <!-- CSS-only menu: a real checkbox keeps it keyboard operable (Tab, then Space) -->
+        <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle" aria-label="Open menu">
+        <label class="nav-toggle__btn" for="nav-toggle">Menu</label>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#features">Features</a></li>
+            <li><a class="nav__link" href="#stories">Stories</a></li>
+            <li><a class="nav__link" href="#pricing">Pricing</a></li>
+            <li><a class="nav__link" href="#signup">Get started</a></li>
+            <li><a class="nav__link" href="dashboard.html">Log in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Get students from application to first day.</h1>
+        <p class="hero__lead">TalentBridge matches students with internships, tracks every application, and gives employers a shortlist they can act on this week.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#signup">Start free</a>
+          <a class="btn" href="#features">See how it works</a>
+        </div>
+      </div>
+      <!-- Art direction per MDN "Responsive images": cropped image on small screens, wide image from 768px -->
+      <picture>
+        <source media="(min-width: 48em)" srcset="assets/hero-wide.svg">
+        <img class="hero__img" src="assets/hero-sm.svg" width="400" height="300"
+             alt="Illustration of a blue suspension bridge connecting two shores, representing students reaching employers.">
+      </picture>
+    </section>
+
+    <section class="section section--tint" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title">Everything between “apply” and “accepted”</h2>
+        <p class="section__lead">Four tools, one shared record for students, schools, and employers.</p>
+        <ul class="feature-grid">
+          <li><article class="card"><span class="feature__icon" aria-hidden="true">M</span><h3>Smart matching</h3><p>Students see roles that fit their skills and schedule, not a thousand listings.</p></article></li>
+          <li><article class="card"><span class="feature__icon" aria-hidden="true">T</span><h3>Application tracking</h3><p>Every application shows its stage, so nobody has to ask for an update.</p></article></li>
+          <li><article class="card"><span class="feature__icon" aria-hidden="true">S</span><h3>Employer shortlists</h3><p>Review ranked candidates and book interviews in one place.</p></article></li>
+          <li><article class="card"><span class="feature__icon" aria-hidden="true">R</span><h3>Placement reports</h3><p>Schools get clear numbers on who was placed, where, and how fast.</p></article></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container" id="stories" aria-labelledby="stories-title">
+      <h2 id="stories-title">What placement teams say</h2>
+      <div class="quote-grid">
+        <figure class="card quote"><blockquote class="quote__text">“We cut our placement time from eleven weeks to five.”</blockquote><figcaption class="quote__cite">Amina Raza, Careers Office, Northfield College</figcaption></figure>
+        <figure class="card quote"><blockquote class="quote__text">“I finally knew where my application stood without sending an email.”</blockquote><figcaption class="quote__cite">Daniel Okoye, Computer Science student</figcaption></figure>
+        <figure class="card quote"><blockquote class="quote__text">“The shortlist was ready on Monday. We hired by Friday.”</blockquote><figcaption class="quote__cite">Priya Nair, Engineering Manager, Lattice Works</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title">Simple pricing</h2>
+        <p class="section__lead">Students always use TalentBridge free.</p>
+        <div class="plan-grid">
+          <article class="card plan"><h3>Student</h3><p class="plan__price">$0</p><ul class="plan__list"><li>Unlimited applications</li><li>Match alerts</li></ul><a class="btn" href="#signup">Create account</a></article>
+          <article class="card plan plan--featured"><h3>Employer</h3><p class="plan__price">$99<span class="field__hint"> / month</span></p><ul class="plan__list"><li>Ranked shortlists</li><li>Interview scheduling</li></ul><a class="btn btn--primary" href="#signup">Start trial</a></article>
+          <article class="card plan"><h3>School</h3><p class="plan__price">Custom</p><ul class="plan__list"><li>Placement reports</li><li>Staff accounts</li></ul><a class="btn" href="#signup">Contact us</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container signup" id="signup" aria-labelledby="signup-title">
+      <div>
+        <h2 id="signup-title">Create your account</h2>
+        <p>Tell us who you are and we’ll set up the right workspace. Fields marked <span class="field__req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+      </div>
+      <form class="form card" action="#" method="post">
+        <div class="field">
+          <label class="field__label" for="name">Full name <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__control" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+          <p class="field__error" id="name-err">Enter your full name.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="email">Email address <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__control" id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-err">
+          <p class="field__hint" id="email-hint">Use your school or work address if you have one.</p>
+          <p class="field__error" id="email-err">Enter an email address like name@example.com.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="role">I am a <span class="field__req" aria-hidden="true">*</span></label>
+          <select class="field__control" id="role" name="role" required aria-describedby="role-err">
+            <option value="">Choose one</option><option>Student</option><option>Employer</option><option>School staff member</option>
+          </select>
+          <p class="field__error" id="role-err">Choose the option that fits you.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="msg">Message <span class="field__hint">(optional)</span></label>
+          <textarea class="field__control" id="msg" name="message" rows="3"></textarea>
+        </div>
+        <!-- Static preview of the error state (the real one appears via :user-invalid after interaction) -->
+        <div class="field field--invalid">
+          <label class="field__label" for="demo">Example of an error state <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__control" id="demo" type="text" value="abc" aria-invalid="true" aria-describedby="demo-err">
+          <p class="field__error" id="demo-err">Enter at least 8 characters.</p>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">Create account</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__cols">
+      <div class="site-footer__brand"><p class="brand" style="color:#fff">TalentBridge</p><p>Internship placement for students, schools, and employers.</p></div>
+      <nav aria-label="Product"><h2 class="visually-hidden">Product</h2><ul class="site-footer__list"><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="dashboard.html">Dashboard</a></li></ul></nav>
+      <nav aria-label="Company"><h2 class="visually-hidden">Company</h2><ul class="site-footer__list"><li><a href="#stories">Stories</a></li><li><a href="#signup">Contact</a></li></ul></nav>
+      <nav aria-label="Legal"><h2 class="visually-hidden">Legal</h2><ul class="site-footer__list"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></nav>
+    </div>
+  </footer>
+</body>
+</html>
